@@ -31,19 +31,18 @@
    - Ex: scalability, resolveablilty, resilience, adaptability
    - Quality attributes affects the architectural pattern choice and impact the development process
 
-## Architectural Patterns
-* The more important part of Software Architecture
+## Importance of Architectural Patterns
 * The architectural pattern define the granularity of the components
 * Knowing the architectural pattern will help us make good decision in development phase
 
 ## Difference Between Architectural Pattern and Design Pattern
-* Architectural Pattern
+* **Architectural Pattern**
   - High level, universal scope
-  - How components are organized and assembled
+  - How components are `organized` and `assembled`
 
-* Design Pattern
+* **Design Pattern**
   - Lower level scope
-  - How components are built
+  - How components are `built`
 
 ## Types of Architectural Patterns
 **1) Layered Architectural Pattern**
