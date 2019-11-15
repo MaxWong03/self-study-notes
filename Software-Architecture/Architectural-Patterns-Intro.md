@@ -52,10 +52,10 @@
    - Monolithic
    - Advocate separation of concerns
    - Software is divded into four layers
-    1) Presentation
-    2) Business
-    3) Persistence
-    4) Infrastrcture
+      1) Presentation
+      2) Business
+      3) Persistence
+      4) Infrastrcture
    - Related functionalities are grouped together in closed modular layers
    - The system achieves its going through the communication of these layers via well defined interfaces (API)
 
@@ -79,15 +79,16 @@
 ![kernel](docs/kernel.png)
    - AKA Plug-in architectural pattern
    - Has Two Major Components
-    1) Core System - meant to have minimal functionality
-    2) Plug-ins - used to customize the software and add features
+      1) Core System - meant to have minimal functionality
+      2) Plug-ins - used to customize the software and add features
    - Monolithic but highly flexible
 
 **5) Service Oriented Architectural Pattern**
 
 ![SOA](docs/SOA.png)
    - Used for large enterprise and complex system
-   - Services in this pattern are coarse-grained, meaning they are bigger in scope, more abstract, and they are built up on each other
+   - Services in this pattern are **coarse-grained**
+     - meaning they are bigger in scope, more abstract, and they are built up on each other
    - Used for integrating different heterogenous components 
    - Much wider scope than other patterns
 
@@ -95,7 +96,8 @@
 
 ![space](docs/Space-based.png)
    - Hybrid of microservices, event driven, and computing science concept
-   - It works through distributed caching, a in memory data grid that is shared among multiple processing units which are independent from each other 
+   - It works through **Distributed Caching**
+      - a in memory data grid that is shared among multiple processing units which are independent from each other 
    - The processing unit are managed by a middleware that has four core components 
       1) Messaging Grid
       2) Data Grid
