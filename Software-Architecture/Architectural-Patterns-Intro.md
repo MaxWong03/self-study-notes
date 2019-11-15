@@ -16,8 +16,7 @@
 ![Design_Development](docs/Design_Development.png)
 * Architectural patterns, quality attributes, messaging mechanisms, and APIS should be determined in the design phase
 * In some cases, you would define how they will manifest in code along with constraints
-* The **design output** is the **input of the development phase**
-* The **Architecture** is the **input of the development phase**
+* The **design output** and **Architecture** is the **input of the development phase**
 
 ## Definition of Software Architecture
 * Software Architecture is how the defining components of a software system are organized and assembled. How they communicate with each other. And the constraints the whole system is ruled by
