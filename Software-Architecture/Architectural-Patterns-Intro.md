@@ -46,6 +46,7 @@
 
 ## Types of Architectural Patterns
 **1) Layered Architectural Pattern**
+
 ![N-tier](docs/N-tier.png)
    - AKA N-tier pattern
    - Monolithic
@@ -59,6 +60,7 @@
    - The system achieves its going through the communication of these layers via well defined interfaces (API)
 
 **2) Microservices Architectural Pattern**
+
 ![Micro](docs/Microservice.png)
    - Service-based type of pattern
    - NOT Sertvice-Oriented Architecture 
@@ -73,6 +75,7 @@
    - Overall structure depends on the topology chosen
 
 **4) MicroKernel Architectural Pattern**
+
 ![kernel](docs/kernel.png)
    - AKA Plug-in architectural pattern
    - Has Two Major Components
@@ -81,6 +84,7 @@
    - Monolithic but highly flexible
 
 **5) Service Oriented Architectural Pattern**
+
 ![SOA](docs/SOA.png)
    - Used for large enterprise and complex system
    - Services in this pattern are coarse-grained, meaning they are bigger in scope, more abstract, and they are built up on each other
@@ -88,6 +92,7 @@
    - Much wider scope than other patterns
 
 **6) Space-based Architectural Pattern**
+
 ![space](docs/Space-based.png)
    - Hybrid of microservices, event driven, and computing science concept
    - It works through distributed caching, a in memory data grid that is shared among multiple processing units which are independent from each other 
