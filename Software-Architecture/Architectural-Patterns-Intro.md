@@ -20,15 +20,15 @@
 
 ## Definition of Software Architecture
 * Software Architecture is how the defining components of a software system are organized and assembled. How they communicate with each other. And the constraints the whole system is ruled by
-1) How the defining components of a software system are organized and assembled
-   - Known as the Architectural Patterns, the overall structure of the system
-2) How they communicate with each other
-   - Interfaces through which the components interact 
-   - Messaging Mechanism
-3) Constraints the whole system is ruled by
-   - Known as Non functional attributes of the system
-   - AKA Quality attributes
-   - scalability, resolveablilty, resilience, adaptability
+1) **How the defining components of a software system are organized and assembled**
+   - Known as the `Architectural Patterns`, the overall structure of the system
+2) **How they communicate with each other**
+   - `Interfaces` through which the components interact 
+   - `Messaging Mechanism`
+3) **Constraints the whole system is ruled by**
+   - Known as` Non-Functional attributes` of the system
+   - AKA `Quality attributes`
+   - Ex: scalability, resolveablilty, resilience, adaptability
    - Quality attributes affects the architectural pattern choice and impact the development process
 
 ## Architectural Patterns
