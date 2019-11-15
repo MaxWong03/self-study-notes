@@ -7,10 +7,10 @@
 ## Big Picture of Software Enginnering and Development
 ![Big Picture](docs/SE_BIG_PICTURE.png)
 * Each yellow box is a phase, output of the previous phase is the input of the next phase
-* Requirement Enginnering - Deals with business requirements and gathering info from stockhodler thats used to build the software
-* Analysis - Process of taking info gathered and converting it to a meaningful form that would help software enginners start working on the software
-* Design - Architecture of the software is defined and documented
-* Development - Building and developing the software
+* **Requirement Enginnering** - Deals with business requirements and gathering info from stockhodler thats used to build the software
+* **Analysis** - Process of taking info gathered and converting it to a meaningful form that would help software enginners start working on the software
+* **Design** - Architecture of the software is defined and documented
+* **Development** - Building and developing the software
 
 ## Design and Development Phase
 ![Design_Development](docs/Design_Development.png)
