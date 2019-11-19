@@ -9,6 +9,11 @@ const reducer = (accumlator, currentValue) => accumlator + currentValue;
 
 const doubleSum = arr => arr.reduce(reducer) * 2;
 
+const SumMultiplier = arr => {
+
+}
+
 module.exports = {
-  doubleSum
+  doubleSum,
+  SumMultiplier
 }
