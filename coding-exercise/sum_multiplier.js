@@ -11,15 +11,9 @@ const doubleSum = arr => arr.reduce(reducer) * 2;
 
 const SumMultiplier = arr => {
   const targetVal = doubleSum(arr);
-  for (let i = 0; i < arr.length - 1; i++) {
-    let num1 = arr[i];
-    for (let j = i + 1; j < arr.length; j++) {
-      let num2 = arr[j];
-      if (num1 * num2 > targetVal) return true
-    }
-  }
-
-  return false;
+  arr.sort((a, b) => b - a);
+  const largestPossibleValue = arr[0] * arr[1];
+  return largestPossibleValue > targetVal
 }
 
 module.exports = {
