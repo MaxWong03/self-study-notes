@@ -1,0 +1,16 @@
+{
+  "name": "coding-exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sum_multiplier.js",
+  "dependencies": {
+    "jest": "^24.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
