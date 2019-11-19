@@ -13,10 +13,20 @@ const getHashPattern = pattern => {
     if (!hashPattern[currentPatternChar]) hashPattern[currentPatternChar] = 1; //if this is the first time encountering that char in pattern
     else hashPattern[currentPatternChar] += 1; // if it isnt the first time
   }
-
   return hashPattern;
 }
 
+const getHashText = text => {
+  const hashText = {};
+  for (let i = 0; i < text.length; i++) {
+    const currentTextChar = text[i];
+    if (!hashText[currentTextChar]) hashText[currentTextChar] = 0;
+  }
+  return hashText;
+}
+
+
 module.exports = {
-  getHashPattern
+  getHashPattern,
+  getHashText
 }
