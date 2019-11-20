@@ -33,6 +33,7 @@ const MinWindowSubString = strArr => {
   let left = 0;
   let right = text.length - 1;
 
+  //filling up hashText
   for (let i = 0; i < text.length; i++) {
     const currentChar = text[i];
     if (!hashPattern[currentChar]) hashText[currentChar] += 1; //if currentChar is not part of the pattern, increase its value in hashText
@@ -47,7 +48,34 @@ const MinWindowSubString = strArr => {
     }
   }
 
+  //finding left indices for substring
+  for (let i = 0; i < text.length; i++) {
+    const currentChar = text[i];
+    if (!hashPattern[currentChar]) { //if currentChar is not part of the pattern
+      left += 1; //move the left indice by 1
+      hashText[currentChar] -= 1; //decrease its value in hashText by 1
+    } else { //if its part of the pattern
+      //and we could shift the left indices and still have enough characters to satisfiy the pattern
+      if (hashText[currentChar] > hashPattern[currentChar]) {
+        left += 1;
+        hashText[currentChar] -= 1;
+      }
+    }
+  }
+
+  return text.substring(left)
+
 }
+
+// ["aaabaaddae", "aed"]
+// hashPattern = { a: 1, e: 1, d: 1 }
+// hashText = { a: 6, b: 1, d: 2, e: 1 }
+// left = 0
+
+// ["aaabaaddae", "aed"]
+// hashPattern = { a: 1, e: 1, d: 1 }
+// hashText = { a: 1, b: 0, d: 1, e: 1 }
+// left = 7
 
 module.exports = {
   getHashPattern,
