@@ -72,10 +72,16 @@ const MinWindowSubString = strArr => {
 // hashText = { a: 6, b: 1, d: 2, e: 1 }
 // left = 0
 
-// ["aaabaaddae", "aed"]
-// hashPattern = { a: 1, e: 1, d: 1 }
-// hashText = { a: 1, b: 0, d: 1, e: 1 }
-// left = 7
+// ["aabdccdbcacd", "aad"]
+// hashPattern = { a: 2, d: 1 }
+// hashText = { a: 3, b: 2, d: 3, c: 4 }
+// left = 0
+
+["aabdccdbcacd", "aad"]
+hashPattern = { a: 2, d: 1 }
+hashText = { a: 2, b: 2, d: 2, c: 3 }
+left = 1
+right = 9
 
 module.exports = {
   getHashPattern,
