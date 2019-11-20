@@ -25,8 +25,32 @@ const getHashText = text => {
   return hashText;
 }
 
+const MinWindowSubString = strArr => {
+  const [text, pattern] = strArr;
+  const hashText = getHashText(text);
+  const hashPattern = getHashPattern(pattern);
+  let count = 0;
+  let left = 0;
+  let right = text.length - 1;
+
+  for (let i = 0; i < text.length; i++) {
+    const currentChar = text[i];
+    if (!hashPattern[currentChar]) hashText[currentChar] += 1; //if currentChar is not part of the pattern, increase its value in hashText
+    else { //if its part of the pattern
+      //and its value in hashText has not yet exceed the required occurence in hashPattern
+      if (hashText[currentChar] <= hashPattern[currentChar]) {
+        hashText[currentChar] += 1;
+        count++;
+      } else { //its value exceed the required occurence in hashPattern
+        hashText[currentChar] += 1;
+      }
+    }
+  }
+
+}
 
 module.exports = {
   getHashPattern,
-  getHashText
+  getHashText,
+  MinWindowSubString
 }
