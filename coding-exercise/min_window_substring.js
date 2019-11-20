@@ -17,18 +17,41 @@ const getSubString = (str, left, right) => {
   return str.substring(left, right)
 }
 
+const getHashPattern = pattern => {
+  const hashPattern = {};
+  for (let i = 0; i < pattern.length; i++) {
+    const currentPatternChar = pattern[i];
+    if (!hashPattern[currentPatternChar]) hashPattern[currentPatternChar] = 1; //if this is the first time encountering that char in pattern
+    else hashPattern[currentPatternChar] += 1; // if it isnt the first time
+  }
+  return hashPattern;
+}
+
+const getHashText = text => {
+  const hashText = {};
+  for (let i = 0; i < text.length; i++) {
+    const currentTextChar = text[i];
+    if (!hashText[currentTextChar]) hashText[currentTextChar] = 0;
+  }
+  return hashText;
+}
+
 
 const MinWindowSubString = strArr => {
   const [text, pattern] = strArr;
   let [left, right] = [0, 0]; //init the pointers
-  const minSubString = '';
-  while (right != text.length) { //There is no more expansion that the right pointer can do
-
-  }
+  let minSubString = '';
+  let window = '';
+  // while (right != text.length) { //There is no more expansion that the right pointer can do
+  //   //expand the window with right pointer until we have a satisfying window
+  //   if (window)
+  // }
 
 }
 
 module.exports = {
   getSubString,
+  getHashPattern,
+  getHashText,
   MinWindowSubString
 }
