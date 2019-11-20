@@ -73,12 +73,27 @@ describe('isSatsifyWindow', () => {
     const result = isSatisfyWindow(hashText, hashPattern);
     expect(result).toBeTruthy();
   });
+
   test('returns true when text = aabd and pattern = aad', () => {
     const hashText = getHashText('aabd');
     const hashPattern = getHashPattern('aad');
     const result = isSatisfyWindow(hashText, hashPattern);
     expect(result).toBeTruthy();
-  })
+  });
+
+  test('returns false when text = asxw and pattern = awg', () => {
+    const hashText = getHashText('asxw');
+    const hashPattern = getHashPattern('awg');
+    const result = isSatisfyWindow(hashText, hashPattern);
+    expect(result).toBeFalsy();
+  });
+
+  test('returns false when text = abdc and pattern = aad', () => {
+    const hashText = getHashText('abdc');
+    const hashPattern = getHashPattern('aad');
+    const result = isSatisfyWindow(hashText, hashPattern);
+    expect(result).toBeFalsy();
+  });
 });
 
 describe('MinWindowSubString', () => {
