@@ -65,6 +65,19 @@ describe('isSatsifyWindow', () => {
     const hashPattern = getHashPattern('abc');
     const result = isSatisfyWindow(hashText, hashPattern);
     expect(result).toBeTruthy();
+  });
+
+  test('returns true when text = dae and pattern = aed', () => {
+    const hashText = getHashText('dae');
+    const hashPattern = getHashPattern('aed');
+    const result = isSatisfyWindow(hashText, hashPattern);
+    expect(result).toBeTruthy();
+  });
+  test('returns true when text = aabd and pattern = aad', () => {
+    const hashText = getHashText('aabd');
+    const hashPattern = getHashPattern('aad');
+    const result = isSatisfyWindow(hashText, hashPattern);
+    expect(result).toBeTruthy();
   })
 });
 
