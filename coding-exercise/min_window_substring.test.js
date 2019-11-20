@@ -35,12 +35,12 @@ describe('getHashPattern', () => {
 describe('getHashText', () => {
   test('returns {a: 0, b: 0, d: 0, e: 0} for text = "aaabaaddae"', () => {
     const hashText = getHashText('aaabaaddae');
-    const expected = { a: 0, b: 0, d: 0, e: 0 };
+    const expected = { a: 6, b: 1, d: 2, e: 1 };
     expect(hashText).toEqual(expected);
   });
   test('returns {a: 3, b: 2, d: 3, c: 4} for text = "aabdccdbcacd"', () => {
     const hashText = getHashText('aabdccdbcacd');
-    const expected = { a: 0, b: 0, d: 0, c: 0 };
+    const expected = { a: 3, b: 2, d: 4, c: 3 };
     expect(hashText).toEqual(expected);
   });
 });

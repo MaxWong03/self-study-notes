@@ -32,7 +32,8 @@ const getHashText = text => {
   const hashText = {};
   for (let i = 0; i < text.length; i++) {
     const currentTextChar = text[i];
-    if (!hashText[currentTextChar]) hashText[currentTextChar] = 0;
+    if (!hashText[currentTextChar]) hashText[currentTextChar] = 1;
+    else hashText[currentTextChar] += 1;
   }
   return hashText;
 }
