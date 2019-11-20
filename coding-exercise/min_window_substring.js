@@ -6,8 +6,15 @@
 Another example: if strArr is ["aabdccdbcacd", "aad"] then the smallest substring of N that contains all of the characters in K is "aabd" which is located at the beginning of the string. Both parameters will be strings ranging in length from 1 to 50 characters and all of K's characters will exist somewhere in the string N. Both strings will only contains lowercase alphabetic characters.
  */
 
-const getSubString = str => {
 
+/**
+ * 
+ * @param {*} str the string that we are taking sub strings of 
+ * @param {*} left the left index, inclusive
+ * @param {*} right the right index exclusive
+ */
+const getSubString = (str, left, right) => {
+  return str.substring(left, right)
 }
 
 
@@ -18,7 +25,6 @@ const MinWindowSubString = strArr => {
 }
 
 module.exports = {
-  getHashPattern,
-  getHashText,
+  getSubString,
   MinWindowSubString
 }

@@ -1,4 +1,17 @@
-const { getHashPattern, getHashText, MinWindowSubString } = require('./min_window_substring');
+const { getSubString, MinWindowSubString } = require('./min_window_substring');
+
+describe('getSubString', () => {
+  const str = 'Mozilla';
+  test('returns oz for str = Mozilla, left = 1, right = 3', () => {
+    const subString = getSubString(str, 1, 3);
+    expect(subString).toEqual('oz');
+  });
+
+  test('returns zilla for str = Mozilla, left = 2, right = 7', () => {
+    const subString = getSubString(str, 2, 7);
+    expect(subString).toEqual('zilla');
+  })
+})
 
 
 describe('MinWindowSubString', () => {
