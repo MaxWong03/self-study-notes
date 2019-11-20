@@ -1,4 +1,4 @@
-const { getHashText, getHashPattern, getSubString, MinWindowSubString } = require('./min_window_substring');
+const { getHashText, getHashPattern, getSubString, isSatisfyWindow, MinWindowSubString } = require('./min_window_substring');
 
 describe('getSubString', () => {
   const str = 'Mozilla';
@@ -40,9 +40,32 @@ describe('getHashText', () => {
   });
   test('returns {a: 3, b: 2, d: 3, c: 4} for text = "aabdccdbcacd"', () => {
     const hashText = getHashText('aabdccdbcacd');
-    const expected = { a: 3, b: 2, d: 4, c: 3 };
+    const expected = { a: 3, b: 2, d: 3, c: 4 };
     expect(hashText).toEqual(expected);
   });
+});
+
+describe('isSatsifyWindow', () => {
+  test('returns true when text = abc and pattern = abc', () => {
+    const hashText = getHashText('abc');
+    const hashPattern = getHashPattern('abc');
+    const result = isSatisfyWindow(hashText, hashPattern);
+    expect(result).toBeTruthy();
+  });
+
+  test('returns false when text = ab and pattern = abc', () => {
+    const hashText = getHashText('ab');
+    const hashPattern = getHashPattern('abc');
+    const result = isSatisfyWindow(hashText, hashPattern);
+    expect(result).toBeFalsy();
+  });
+
+  test('returns true when text = banc and pattern = abc', () => {
+    const hashText = getHashText('banc');
+    const hashPattern = getHashPattern('abc');
+    const result = isSatisfyWindow(hashText, hashPattern);
+    expect(result).toBeTruthy();
+  })
 });
 
 describe('MinWindowSubString', () => {

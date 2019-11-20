@@ -15,7 +15,7 @@ Another example: if strArr is ["aabdccdbcacd", "aad"] then the smallest substrin
  */
 const getSubString = (str, left, right) => {
   //right + 1 to make the substring right index inclusive
-  return str.substring(left, right + 1); 
+  return str.substring(left, right + 1);
 }
 
 const getHashPattern = pattern => {
@@ -38,6 +38,26 @@ const getHashText = text => {
   return hashText;
 }
 
+/**
+ * 
+ * @param {*} hashText - the current window determined by left and right pointers
+ * @param {*} hashPattern - the pattern
+ */
+const isSatisfyWindow = (hashText, hashPattern) => {
+  for (const keyChar in hashPattern) {
+    // the window does not contain the char that makes up the pattern
+    if (!hashText[keyChar]) return false;
+    //the window does contain the char that makes up the pattern
+    else {
+      if (hashText[keyChar] < hashPattern[keyChar]) return false;
+    }
+  }
+  return true;
+};
+
+const hashText = getHashText('ab');
+const hashPattern = getHashPattern('abc');
+const result = isSatisfyWindow(hashText, hashPattern);
 
 const MinWindowSubString = strArr => {
   const [text, pattern] = strArr;
@@ -55,5 +75,6 @@ module.exports = {
   getSubString,
   getHashPattern,
   getHashText,
+  isSatisfyWindow,
   MinWindowSubString
 }
