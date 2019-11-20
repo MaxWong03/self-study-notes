@@ -25,47 +25,47 @@ const getHashText = text => {
   return hashText;
 }
 
-const MinWindowSubString = strArr => {
-  const [text, pattern] = strArr;
-  const hashText = getHashText(text);
-  const hashPattern = getHashPattern(pattern);
-  let count = 0;
-  let left = 0;
-  let right = text.length - 1;
+// const MinWindowSubString = strArr => {
+//   const [text, pattern] = strArr;
+//   const hashText = getHashText(text);
+//   const hashPattern = getHashPattern(pattern);
+//   let count = 0;
+//   let left = 0;
+//   let right = text.length - 1;
 
-  //filling up hashText
-  for (let i = 0; i < text.length; i++) {
-    const currentChar = text[i];
-    if (!hashPattern[currentChar]) hashText[currentChar] += 1; //if currentChar is not part of the pattern, increase its value in hashText
-    else { //if its part of the pattern
-      //and its value in hashText has not yet exceed the required occurence in hashPattern
-      if (hashText[currentChar] <= hashPattern[currentChar]) {
-        hashText[currentChar] += 1;
-        count++;
-      } else { //its value exceed the required occurence in hashPattern
-        hashText[currentChar] += 1;
-      }
-    }
-  }
+//   //filling up hashText
+//   for (let i = 0; i < text.length; i++) {
+//     const currentChar = text[i];
+//     if (!hashPattern[currentChar]) hashText[currentChar] += 1; //if currentChar is not part of the pattern, increase its value in hashText
+//     else { //if its part of the pattern
+//       //and its value in hashText has not yet exceed the required occurence in hashPattern
+//       if (hashText[currentChar] <= hashPattern[currentChar]) {
+//         hashText[currentChar] += 1;
+//         count++;
+//       } else { //its value exceed the required occurence in hashPattern
+//         hashText[currentChar] += 1;
+//       }
+//     }
+//   }
 
-  //finding left indices for substring
-  for (let i = 0; i < text.length; i++) {
-    const currentChar = text[i];
-    if (!hashPattern[currentChar]) { //if currentChar is not part of the pattern
-      left += 1; //move the left indice by 1
-      hashText[currentChar] -= 1; //decrease its value in hashText by 1
-    } else { //if its part of the pattern
-      //and we could shift the left indices and still have enough characters to satisfiy the pattern
-      if (hashText[currentChar] > hashPattern[currentChar]) {
-        left += 1;
-        hashText[currentChar] -= 1;
-      }
-    }
-  }
+//   //finding left indices for substring
+//   for (let i = 0; i < text.length; i++) {
+//     const currentChar = text[i];
+//     if (!hashPattern[currentChar]) { //if currentChar is not part of the pattern
+//       left += 1; //move the left indice by 1
+//       hashText[currentChar] -= 1; //decrease its value in hashText by 1
+//     } else { //if its part of the pattern
+//       //and we could shift the left indices and still have enough characters to satisfiy the pattern
+//       if (hashText[currentChar] > hashPattern[currentChar]) {
+//         left += 1;
+//         hashText[currentChar] -= 1;
+//       }
+//     }
+//   }
 
-  return text.substring(left)
+//   return text.substring(left)
 
-}
+// }
 
 // ["aaabaaddae", "aed"]
 // hashPattern = { a: 1, e: 1, d: 1 }
@@ -77,11 +77,11 @@ const MinWindowSubString = strArr => {
 // hashText = { a: 3, b: 2, d: 3, c: 4 }
 // left = 0
 
-["aabdccdbcacd", "aad"]
-hashPattern = { a: 2, d: 1 }
-hashText = { a: 2, b: 2, d: 2, c: 3 }
-left = 1
-right = 9
+
+const MinWindowSubString = strArr => {
+  const [text, pattern] = strArr;
+  let [left, right] = [0, 0]; //init the pointers
+}
 
 module.exports = {
   getHashPattern,
