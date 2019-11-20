@@ -21,6 +21,10 @@ const getSubString = (str, left, right) => {
 const MinWindowSubString = strArr => {
   const [text, pattern] = strArr;
   let [left, right] = [0, 0]; //init the pointers
+  const minSubString = '';
+  while (right != text.length) { //There is no more expansion that the right pointer can do
+
+  }
 
 }
 
