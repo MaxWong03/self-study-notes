@@ -2,15 +2,20 @@ const { getHashText, getHashPattern, getSubString, MinWindowSubString } = requir
 
 describe('getSubString', () => {
   const str = 'Mozilla';
-  test('returns oz for str = Mozilla, left = 1, right = 3', () => {
-    const subString = getSubString(str, 1, 3);
+  test('returns oz for str = Mozilla, left = 1, right = 2', () => {
+    const subString = getSubString(str, 1, 2);
     expect(subString).toEqual('oz');
   });
 
   test('returns zilla for str = Mozilla, left = 2, right = 7', () => {
-    const subString = getSubString(str, 2, 7);
+    const subString = getSubString(str, 2, 6);
     expect(subString).toEqual('zilla');
-  })
+  });
+
+  test('returns M for str = Mozilla, left = 0, right = 0', () => {
+    const subString = getSubString(str, 0, 0);
+    expect(subString).toEqual('M');
+  });
 });
 
 describe('getHashPattern', () => {

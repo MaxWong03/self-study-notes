@@ -11,10 +11,11 @@ Another example: if strArr is ["aabdccdbcacd", "aad"] then the smallest substrin
  * 
  * @param {*} str the string that we are taking sub strings of 
  * @param {*} left the left index, inclusive
- * @param {*} right the right index exclusive
+ * @param {*} right the right index inclusive
  */
 const getSubString = (str, left, right) => {
-  return str.substring(left, right)
+  //right + 1 to make the substring right index inclusive
+  return str.substring(left, right + 1); 
 }
 
 const getHashPattern = pattern => {
