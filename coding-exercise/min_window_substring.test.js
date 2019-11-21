@@ -126,4 +126,8 @@ describe('MinWindowSubString', () => {
     const result = MinWindowSubString(['this is a test string', 'tist']);
     expect(result).toEqual('t stri');
   });
+  test('returns ksfor when strArr is ["geeksforgeeks", "ork"]', () => {
+    const result = MinWindowSubString(['geeksforgeeks', 'ork']);
+    expect(result).toEqual('ksfor');
+  });
 });
