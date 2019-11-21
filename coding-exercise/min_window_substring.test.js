@@ -1,4 +1,4 @@
-const { getHashText, getHashPattern, getSubString, isSatisfyWindow, MinWindowSubString } = require('./min_window_substring');
+const { getHashText, getHashPattern, getSubString, isSatisfyWindow, getMinWindow, MinWindowSubString } = require('./min_window_substring');
 
 describe('getSubString', () => {
   const str = 'Mozilla';
@@ -93,6 +93,23 @@ describe('isSatsifyWindow', () => {
     const hashPattern = getHashPattern('aad');
     const result = isSatisfyWindow(hashText, hashPattern);
     expect(result).toBeFalsy();
+  });
+});
+
+describe('getMinWindow', () => {
+  test('return abc if input is ("", abc)', () => {
+    const minWindow = getMinWindow('', 'abc');
+    expect(minWindow).toEqual('abc');
+  });
+
+  test('returns abc if input is (abcd, abc)', () => {
+    const minWindow = getMinWindow('abcd', 'abc');
+    expect(minWindow).toEqual('abc');
+  });
+
+  test('returns abc if input is (abc, abcd)', () => {
+    const minWindow = getMinWindow('abc', 'abcd');
+    expect(minWindow).toEqual('abc');
   });
 });
 

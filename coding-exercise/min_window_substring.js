@@ -55,19 +55,55 @@ const isSatisfyWindow = (hashText, hashPattern) => {
   return true;
 };
 
-const hashText = getHashText('ab');
-const hashPattern = getHashPattern('abc');
-const result = isSatisfyWindow(hashText, hashPattern);
+const getMinWindow = (minSub, curMinWindow) => {
+  //if minSub is an empty string, return curMinWindow
+  if (!minSub) return curMinWindow;
+  else {
+    if (minSub.length > curMinWindow.length) return curMinWindow;
+    else return minSub;
+  }
+}
 
+/**
+ * abc , c
+ * 
+ * 1st iteration
+ * subString = ''
+ * window = a, not satisfied, subString stays the same, increase right, left = 0, right = 1
+ * 
+ * 2nd iteration
+ * subString = ''
+ * window = ab, not satisfied, subString stays the same, increase right, left = 0, right = 2
+ * 
+ * 3rd iteration
+ * subString = 'abc'
+ * window = abc, satifsied, subStrings becomes 'abc' increase left, left = 1, right = 2
+ * 
+ * 4th iteration
+ * subString = 'abc'
+ * window = bc, satifsied, subString becomes 'bc', increase left, left = 2, right = 2
+ * 
+ * 5th iteration
+ * window = c, satisfied, subString becomes 'c', increase left, left = 3, right = 2
+ */
 const MinWindowSubString = strArr => {
   const [text, pattern] = strArr;
+  const hashPattern = getHashPattern(pattern);
   let [left, right] = [0, 0]; //init the pointers
   let minSubString = '';
-  let window = '';
-  // while (right != text.length) { //There is no more expansion that the right pointer can do
-  //   //expand the window with right pointer until we have a satisfying window
-  //   if (window)
-  // }
+  //Run until there is no more expansion that the right pointer can do
+  while (left != text.length && right != text.length) {
+    //expand the window with right pointer until we have a satisfying window
+    const currentMinWindow = getSubString(text, left, right);
+    const hashText = getHashText(currentMinWindow);
+    if (!isSatisfyWindow(hashText, hashPattern)) right++;
+    //if we have a satisfying window 
+    else {
+      minSubString = getMinWindow(minSubString, currentMinWindow);
+      left++;
+    }
+  }
+  return minSubString;
 
 }
 
@@ -76,5 +112,6 @@ module.exports = {
   getHashPattern,
   getHashText,
   isSatisfyWindow,
+  getMinWindow,
   MinWindowSubString
 }
