@@ -121,5 +121,9 @@ describe('MinWindowSubString', () => {
   test('returns aabd when strArr is ["aabdccdbcacd", "aad"]', () => {
     const result = MinWindowSubString(['aabdccdbcacd', 'aad']);
     expect(result).toEqual('aabd');
-  })
+  });
+  test('returns t stri when strArr is ["this is a test string", "tist"]', () => {
+    const result = MinWindowSubString(['this is a test string', 'tist']);
+    expect(result).toEqual('t stri');
+  });
 });
