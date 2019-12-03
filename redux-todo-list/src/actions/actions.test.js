@@ -22,4 +22,16 @@ describe('actions', () => {
     };
     expect(action).toEqual(expectedAction);
   });
+
+  it('should create an action to edit the name of a todo', () => {
+    const action = editTodoName(5, 'The Newst Name');
+    const expectedAction = {
+      type: EDIT_TODO_NAME,
+      value: {
+        taskID: 5,
+        newName: 'The Newst Name'
+      }
+    };
+    expect(action).toEqual(expectedAction);
+  });
 });

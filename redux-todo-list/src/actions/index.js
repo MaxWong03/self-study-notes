@@ -22,11 +22,11 @@ export const removeTodo = (taskID) => {
   }
 }
 
-export const editTodoName = (id, newName) => {
+export const editTodoName = (taskID, newName) => {
   return {
     type: EDIT_TODO_NAME,
     value: {
-      id,
+      taskID,
       newName
     }
   }
