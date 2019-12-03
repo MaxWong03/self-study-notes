@@ -8,12 +8,20 @@ describe('todoReducer', () => {
     expect(returnState.length).toEqual(0);
     expect(returnState).toEqual(expectedState);
   });
-  
+
   it('should return current state for unknown action', () => {
-    const currentState = [{id: 5, name: 'Task', isCompleted: false}];
+    const currentState = [{ id: 5, name: 'Task', isCompleted: false }];
     const returnState = todoReducer(currentState, { type: 'Unknown' });
     expect(returnState.length).toEqual(1);
     expect(returnState).toEqual(currentState);
+  });
+
+  it('should handle ADD_TODO', () => {
+    const currentState = [];
+    const newTodo = { id: 1, name: 'testTask', isCompleted: false };
+    const returnState = todoReducer(currentState, { type: ADD_TODO, value: newTodo });
+    expect(returnState).toContain(newTodo);
+    expect(returnState.length).toEqual(1);
   });
 });
 
