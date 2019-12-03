@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { addTodo } from './actions';
+import { addTodo, removeTodo } from './actions';
 
 function App() {
   const todos = useSelector(state => state.todo);
@@ -12,7 +12,8 @@ function App() {
         {
         todos.map((task, index) => (
           <p key={index}>
-            {task.name + '-' + (index + 1)}
+            {task.name}
+            <button onClick={() => dispatch(removeTodo(task.id))}>Remove Todo</button>
           </p>
         ))
       }
