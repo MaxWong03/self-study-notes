@@ -7,16 +7,16 @@ function App() {
   const todos = useSelector(state => state.todo);
   const dispatch = useDispatch();
   return (
-    <div className="App">
-      {
+      <div className="App">
+        <button onClick={() => dispatch(addTodo())}>Add Todo</button>
+        {
         todos.map((task, index) => (
           <p key={index}>
-            {task.name}
+            {task.name + '-' + (index + 1)}
           </p>
         ))
       }
-      <button onClick={() => dispatch(addTodo())}>Add Todo</button>
-    </div>
+      </div>
   );
 }
 
