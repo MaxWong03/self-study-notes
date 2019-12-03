@@ -5,12 +5,13 @@
  */
 
 const twoSum = (numArr, target) => {
+  const hashTable = new Map();
   for (let i = 0; i < numArr.length; i++) {
-    const num1  = numArr[i];
-    for (let j = i + 1; j < numArr.length; j++) {
-      const num2 = numArr[j];
-      if (num1 + num2 === target) return [i, j];
-    }
+    const curEl = numArr[i];
+    const complement = target - curEl;
+    const complementIndex = hashTable.get(complement);
+    if (complementIndex !== undefined) return [i, complementIndex].sort();
+    else hashTable.set(curEl, i);
   }
 };
 
