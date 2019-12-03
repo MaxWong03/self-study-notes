@@ -6,7 +6,9 @@
   "dependencies": {
     "jest": "^24.9.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^6.7.2"
+  },
   "scripts": {
     "test": "jest --watchAll"
   },
