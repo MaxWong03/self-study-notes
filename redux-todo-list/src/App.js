@@ -14,6 +14,7 @@ function App() {
         todos.map((task, index) => (
           <Task
             key={index}
+            id={task.id}
             taskName={task.name + '-' + (index + 1)}
             onRemove={() => dispatch(removeTodo(task.id))}
           />
