@@ -5,7 +5,7 @@ export const addTodo = () => {
     type: 'ADD_TODO',
     value: {
       id: uniqid(),
-      name: uniqid(),
+      name: 'New Task',
       isCompleted: false
     }
   }
