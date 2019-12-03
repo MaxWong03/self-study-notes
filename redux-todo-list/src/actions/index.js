@@ -1,6 +1,9 @@
 export const addTodo = () => {
   return {
     type: 'ADD_TODO',
-    value: 'New Todo'
+    value: {
+      name: 'New Task',
+      isCompleted: false
+    }
   }
 }
