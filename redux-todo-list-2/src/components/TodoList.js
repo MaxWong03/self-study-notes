@@ -5,11 +5,11 @@ import Todo from './Todo';
 export default function TodoList({ todos, onTodoClick }) {
   return (
     <ul>
-      {todos.map((todo, index) => (
+      {todos.map(todo => (
         <Todo
-          key={index}
+          key={todo.id}
           {...todo}
-          onClick={() => onTodoClick(index)}
+          onClick={() => onTodoClick(todo.id)}
         />
       ))}
     </ul>

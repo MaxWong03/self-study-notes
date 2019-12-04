@@ -28,10 +28,10 @@ export function addTodo(text) {
   }
 }
 
-export function toggleTodo(index) {
+export function toggleTodo(id) {
   return {
     type: TOGGLE_TODO,
-    index
+    id
   }
 }
 
