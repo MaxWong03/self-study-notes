@@ -5,12 +5,14 @@ const todoReducer = (state = [], action) => {
     case ADD_TODO:
       return [...state, action.value];
     case REMOVE_TODO:
-      return state.filter(task => task.id !== action.value)
+      return state.filter(task => task.id !== action.value);
     case EDIT_TODO_NAME:
-      return state.map(task => {
-        if (task.id === action.value.taskID) return { ...task, name: action.value.newName };
-        else return task;
-      })
+      return state.map(task => (
+        task.id === action.value.taskID ?
+          { ...task, name: action.value.newName }
+          :
+          task
+      ));
     default:
       return state;
   }

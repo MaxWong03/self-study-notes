@@ -7,6 +7,7 @@ import Task from './components/Task';
 function App() {
   const todos = useSelector(state => state.todo);
   const dispatch = useDispatch();
+  console.log(todos);
   return (
     <div className="App">
       <button onClick={() => dispatch(addTodo())}>Add Todo</button>
@@ -15,7 +16,7 @@ function App() {
           <Task
             key={index}
             id={task.id}
-            taskName={task.name + '-' + (index + 1)}
+            taskName={task.id}
             onRemove={() => dispatch(removeTodo(task.id))}
           />
         ))
