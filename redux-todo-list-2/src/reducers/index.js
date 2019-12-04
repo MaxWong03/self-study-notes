@@ -23,7 +23,8 @@ const todos = (state = [], action) => {
         ...state,
         {
           text: action.text,
-          completed: false
+          completed: false,
+          id: action.id
         }
       ]
     case TOGGLE_TODO:
