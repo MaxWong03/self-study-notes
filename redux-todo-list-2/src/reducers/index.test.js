@@ -1,5 +1,5 @@
 import { todos, visibilityFilter } from './index';
-import { addTodo, toggleTodo, setVisibilityFilter } from '../actions'
+import { addTodo, toggleTodo, setVisibilityFilter, VisibilityFilters } from '../actions'
 
 expect.extend({
   toContainObject(received, argument) {
@@ -73,6 +73,23 @@ describe('todoApp reducer', () => {
         completed: false,
         id: 4
       })
+    });
+  });
+
+  describe('visibilityFilter reducer', () => {
+    it('should handle SET_VISIBILITY_FILTER action correctly', () => {
+      const currentState = VisibilityFilters.SHOW_ALL;
+      const showAllObj = setVisibilityFilter(VisibilityFilters.SHOW_ALL);
+      const showCompleteObj = setVisibilityFilter(VisibilityFilters.SHOW_COMPLETED);
+      const showActiveObj = setVisibilityFilter(VisibilityFilters.SHOW_ACTIVE);
+      let nextState = visibilityFilter(currentState, showAllObj);
+      expect(nextState).toEqual(VisibilityFilters.SHOW_ALL);
+      nextState = visibilityFilter(nextState, showCompleteObj);
+      expect(nextState).toEqual(VisibilityFilters.SHOW_COMPLETED);
+      nextState = visibilityFilter(nextState, showActiveObj);
+      expect(nextState).toEqual(VisibilityFilters.SHOW_ACTIVE);
+      nextState = visibilityFilter(nextState, showAllObj);
+      expect(nextState).toEqual(VisibilityFilters.SHOW_ALL);
     });
   });
 });
