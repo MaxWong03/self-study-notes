@@ -7,7 +7,6 @@ import Task from './components/Task';
 function App() {
   const todos = useSelector(state => state.todo);
   const dispatch = useDispatch();
-  console.log(todos);
   return (
     <div className="App">
       <button onClick={() => dispatch(addTodo())}>Add Todo</button>

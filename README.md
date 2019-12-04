@@ -3,4 +3,5 @@
 * Redux
   * [learn-redux](/learn-redux)
   * [redux-todo-list](/redux-todo-list)
+  * [redux-todo-list-2](/redux-todo-list-2)
 * [Coding Exercise](/coding-exercise)
