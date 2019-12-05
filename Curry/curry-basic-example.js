@@ -17,3 +17,25 @@ const add = x => {
 const addShortHand = x => y => x + y;
 
 console.log(add(3)(4) === addShortHand(3)(4));
+
+const increment = add(1);
+/**
+ * returns the function
+ *  y => {
+ *  1 + y
+ * }
+ */
+
+increment(2);
+//3, same as add(1)(2)
+
+const addTen = add(10);
+/**
+ * returns the function
+ * y => {
+ *  10 + y
+ * }
+ */
+
+addTen(2);
+//12, same as add(10)(2)
