@@ -31,11 +31,11 @@ const receivePosts = (subreddit, json) => {
   }
 }
 
-const fetchPosts = subreddit => dispatch => {
+const fetchPosts = subreddit => async dispatch => {
   dispatch(requestPosts(subreddit))
-  return fetch(`https://www.reddit.com/r/${subreddit}.json`)
-    .then(response => response.json())
-    .then(json => dispatch(receivePosts(subreddit, json)))
+  const response = await fetch(`https://www.reddit.com/r/${subreddit}.json`);
+  const json = await response.json();
+  return dispatch(receivePosts(subreddit, json));
 }
 
 const shouldFetchPosts = (state, subreddit) => {
