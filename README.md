@@ -4,6 +4,8 @@
   * [learn-redux](/Redux/learn-redux)
   * [redux-todo-list](/Redux/redux-todo-list)
   * [redux-todo-list-2](/Redux/redux-todo-list-2)
+* [Async Redux](/Async-Redux)
+  * [Reddit-Api](/Async-Redux/reddit-api)
 * [Coding Exercise](/coding-exercise)
 * [Curry](/Curry)
 
