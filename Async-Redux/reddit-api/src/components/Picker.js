@@ -5,7 +5,7 @@ export default function Picker({ value, onChange, options }) {
   return (
     <span>
       <h1 data-test-id="option-value">{value}</h1>
-      <select onChange={e => onChange(e.target.value)} value={value} data-testid="option-selector">
+      <select onChange={e => onChange(e.target.value)} value={value} >
         {
           options.map(option => (
             <option value={option} key={option}>
