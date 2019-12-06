@@ -1,6 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import Picker from './Picker';
+
+afterEach(cleanup);
 
 describe('Picker Component', () => {
   it('renders without crashing', () => {

@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 export default function Picker({ value, onChange, options }) {
   return (
     <span>
-      <h1>{value}</h1>
-      <select onChange={e => onChange(e.target.value)} value={value}>
+      <h1 data-test-id="option-value">{value}</h1>
+      <select onChange={e => onChange(e.target.value)} value={value} data-testid="option-selector">
         {
           options.map(option => (
             <option value={option} key={option}>
