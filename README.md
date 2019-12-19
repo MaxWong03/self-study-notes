@@ -8,6 +8,7 @@
   * [Reddit-Api](/Async-Redux/reddit-api)
 * [Coding Exercise](/coding-exercise)
 * [Curry](/Curry)
+* [TypeScript](/TypeScript)
 
 
 
