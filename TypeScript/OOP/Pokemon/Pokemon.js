@@ -1,7 +1,5 @@
-"use strict";
-exports.__esModule = true;
-var Pokemon = /** @class */ (function () {
-    function Pokemon(name, weight, height, type, ability, region) {
+export class Pokemon {
+    constructor(name, weight, height, type, ability, region) {
         this.name = name;
         this.weight = weight;
         this.height = height;
@@ -9,6 +7,9 @@ var Pokemon = /** @class */ (function () {
         this.ability = ability;
         this.region = region;
     }
-    return Pokemon;
-}());
-exports.Pokemon = Pokemon;
+    get info() {
+        return this.name + this.weight + this.height + this.type + this.ability + this.region;
+    }
+}
+const Pikachu = new Pokemon('Pikachu', 6.0, 0.4, ['Electric'], ['Static', 'Lightning Rod'], 'Kanto');
+console.log(Pikachu.info);

@@ -19,5 +19,9 @@
   "homepage": "https://github.com/MaxWong03/self-study-notes#readme",
   "dependencies": {
     "loadash": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7"
   }
 }
