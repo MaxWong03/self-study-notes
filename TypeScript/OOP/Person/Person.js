@@ -24,7 +24,14 @@ var Programmer = /** @class */ (function (_super) {
     function Programmer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    Programmer.prototype.greet = function () {
+        console.log('Hello world');
+    };
+    Programmer.prototype.greetLikeNormalPeople = function () {
+        _super.prototype.greet.call(this);
+    };
     return Programmer;
 }(Person));
 var aProgrammer = new Programmer();
 aProgrammer.greet();
+aProgrammer.greetLikeNormalPeople();
