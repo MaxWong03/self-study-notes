@@ -27,6 +27,7 @@ var Jafar = /** @class */ (function (_super) {
             new RealmLocation('Oasis', false, [new Action('Activate'), new Action('PlayACard')], [new Action('GainPower'), new Action('PlayACard')]),
             new RealmLocation('Cave Of Wonders', true, [new Action('Discard'), new Action('GainPower')], [new Action('PlayACard'), new Action('MoveAllyOrItem')])
         ];
+        _this.currentLocation = 'Sultan Palace';
         return _this;
     }
     return Jafar;

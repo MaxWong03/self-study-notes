@@ -32,13 +32,6 @@ var Villain = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    Villain.prototype.hasLockedLocation = function () {
-        var lockedLocation = this._realm.find(function (realmLocation) { return realmLocation.isLocked; });
-        if (lockedLocation)
-            return true;
-        else
-            return false;
-    };
     Object.defineProperty(Villain.prototype, "currentLocation", {
         get: function () {
             return this._currentLocation;
@@ -51,6 +44,13 @@ var Villain = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    Villain.prototype.hasLockedLocation = function () {
+        var lockedLocation = this._realm.find(function (realmLocation) { return realmLocation.isLocked; });
+        if (lockedLocation)
+            return true;
+        else
+            return false;
+    };
     Villain.prototype.move = function (newLocation) {
         this.currentLocation = newLocation;
         return true; //return true upon sucession

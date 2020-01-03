@@ -1,10 +1,10 @@
 import RealmLocation = require('../RealmLocation');
 
 class Villain {
-    private _name: string;
-    private _objective: string;
-    private _realm: Array<RealmLocation>;
-    private _currentLocation: string;
+  private _name: string;
+  private _objective: string;
+  private _realm: Array<RealmLocation>;
+  private _currentLocation: string;
 
   get name() {
     return this._name;
@@ -30,19 +30,20 @@ class Villain {
     this._realm = villainRealm;
   }
 
-  hasLockedLocation() {
-    const lockedLocation = this._realm.find(realmLocation => realmLocation.isLocked);
-    if (lockedLocation) return true
-    else return false;
-  }
 
   get currentLocation() {
     return this._currentLocation;
   }
 
   set currentLocation(newLocation: string) {
-    if (newLocation === this.currentLocation) throw new Error ('Must move to new location at the start of each turn');
+    if (newLocation === this.currentLocation) throw new Error('Must move to new location at the start of each turn');
     this._currentLocation = newLocation;
+  }
+  
+  hasLockedLocation() {
+    const lockedLocation = this._realm.find(realmLocation => realmLocation.isLocked);
+    if (lockedLocation) return true
+    else return false;
   }
 
   move(newLocation: string) {

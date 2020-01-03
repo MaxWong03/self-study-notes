@@ -10,8 +10,9 @@ class Jafar extends Villain {
     new RealmLocation('Streets Of Agrabah', false, [new Action('GainPower'), new Action('Fate')], [new Action('Discard'), new Action('PlayACard')]),
     new RealmLocation('Oasis', false, [new Action('Activate'), new Action('PlayACard')], [new Action('GainPower'), new Action('PlayACard')]),
     new RealmLocation('Cave Of Wonders', true, [new Action('Discard'), new Action('GainPower')], [new Action('PlayACard'), new Action('MoveAllyOrItem')])
-  ]
-  currentLocation: 'Sultan Palace';
+  ];
+  currentLocation: string = 'Sultan Palace';
+
 }
 
 export = Jafar;
