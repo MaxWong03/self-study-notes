@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/MaxWong03/self-study-notes#readme",
   "dependencies": {
+    "babel-node": "0.0.1-security",
     "loadash": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7"
   }
 }
