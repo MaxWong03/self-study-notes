@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var Pokemon = /** @class */ (function () {
     function Pokemon(name, weight, height, type, ability, region) {
         this.name = name;
@@ -21,3 +21,4 @@ var Pokemon = /** @class */ (function () {
 exports.Pokemon = Pokemon;
 var Pikachu = new Pokemon('Pikachu', 6.0, 0.4, ['Electric'], ['Static', 'Lightning Rod'], 'Kanto');
 console.log(Pikachu.info);
+//# sourceMappingURL=Pokemon.js.map

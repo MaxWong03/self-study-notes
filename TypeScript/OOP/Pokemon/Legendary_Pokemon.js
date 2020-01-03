@@ -12,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var Pokemon_1 = require("./Pokemon");
 var LegendaryPokemon = /** @class */ (function (_super) {
     __extends(LegendaryPokemon, _super);
@@ -21,3 +21,4 @@ var LegendaryPokemon = /** @class */ (function (_super) {
     }
     return LegendaryPokemon;
 }(Pokemon_1.Pokemon));
+//# sourceMappingURL=Legendary_Pokemon.js.map

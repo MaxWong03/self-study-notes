@@ -15,3 +15,4 @@ function greeter(person) {
 }
 var user = new Student("Jane", "M.", "User");
 document.body.textContent = greeter(user);
+//# sourceMappingURL=greeter.js.map
