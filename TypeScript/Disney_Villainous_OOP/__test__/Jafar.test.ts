@@ -1,14 +1,15 @@
 import Jafar = require('../Villain/Jafar');
 
-test('Jafar', () => {
+describe('Jafar', () => {
   const jafar = new Jafar();
-  describe('Attributes', () => {
+  test('Attributes', () => {
     expect(jafar.name).toBe('Jafar');
     expect(jafar.realm.length).toBe(4);
   });
 
-  describe('Methods', () => {
+  test('Methods', () => {
     expect(jafar.hasLockedLocation()).toBe(true);
     expect(jafar.hasLockedLocation()).not.toBe(false);
   });
-});
+})
+
