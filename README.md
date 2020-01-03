@@ -10,6 +10,7 @@
 * [Curry](/Curry)
 * [TypeScript](/TypeScript)
   * [TypeScript in 5 mins](/TypeScript/TypeScript_in_5_mins)
+  * [Disney Villainous OOP](/TypeScript/Disney_Villainous_OOP)
 
 
 
