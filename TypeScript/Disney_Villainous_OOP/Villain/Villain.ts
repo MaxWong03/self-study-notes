@@ -5,6 +5,7 @@ class Villain {
   private _objective: string;
   private _realm: Array<RealmLocation>;
   private _currentLocation: string;
+  private _power: number = 0;
 
   get name() {
     return this._name;
@@ -12,6 +13,14 @@ class Villain {
 
   set name(villainName: string) {
     this._name = villainName;
+  }
+
+  get power() {
+    return this._power;
+  }
+
+  set power(powerToken: number) {
+    this._power + powerToken;
   }
 
   get objective() {
@@ -35,14 +44,20 @@ class Villain {
     return this._currentLocation;
   }
 
+  getLocationClass(locationName: string) {
+    return this._realm.find(realmLocation => realmLocation.name === locationName);
+  }
+
   set currentLocation(newLocation: string) {
-    if (newLocation === this.currentLocation) throw new Error('Must move to new location at the start of each turn');
+    if (newLocation === this.currentLocation) throw new Error('Must move to another location');
+    const locationClass = this.getLocationClass(newLocation);
+    if (locationClass.isLocked) throw new Error('Can not move to a locked location');
     this._currentLocation = newLocation;
   }
-  
+
   hasLockedLocation() {
     const lockedLocation = this._realm.find(realmLocation => realmLocation.isLocked);
-    if (lockedLocation) return true
+    if (lockedLocation) return true;
     else return false;
   }
 
