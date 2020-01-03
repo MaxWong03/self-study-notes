@@ -16,7 +16,7 @@ describe('Jafar', () => {
   });
 
   test('Moving', () => {
-    // jafar.move(jafar.currentLocation)
+    expect(() => { jafar.move(jafar.currentLocation) }).toThrow();
   });
 })
 
