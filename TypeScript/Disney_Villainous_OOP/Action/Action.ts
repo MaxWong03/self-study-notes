@@ -2,9 +2,9 @@ class Action {
   name: string;
   isCovered: boolean;
 
-  constructor(name: string, isCovered: boolean = false) {
+  constructor(name: string) {
     this.name = name;
-    this.isCovered = isCovered;
+    this.isCovered = false;
   }
 }
 
