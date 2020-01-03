@@ -1,4 +1,4 @@
-import Action = require('./Action');
+import Action = require('./Action/Action');
 
 class RealmLocation {
   name: string;
