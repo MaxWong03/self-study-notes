@@ -3,7 +3,6 @@ import RealmLocation = require('../RealmLocation');
 import Action = require('../Action/Action');
 
 class Jafar extends Villain {
-
   name: string = 'Jafar';
   objective: string = "Start your turn with Magic Lamp at the Sultan's Palace and have Genie on your side";
   realm: Array<RealmLocation> = [
@@ -12,10 +11,6 @@ class Jafar extends Villain {
     new RealmLocation('Oasis', false, [new Action('Activate'), new Action('PlayACard')], [new Action('GainPower'), new Action('PlayACard')]),
     new RealmLocation('Cave Of Wonders', true, [new Action('Discard'), new Action('GainPower')], [new Action('PlayACard'), new Action('MoveAllyOrItem')])
   ]
-
-  constructor(name: string, objective: string, realm: Array<RealmLocation>) {
-    super(name, objective, realm);
-  }
 }
 
 export = Jafar;
