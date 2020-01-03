@@ -4,7 +4,7 @@ class GainPower extends Action {
   amount: number;
 
   constructor(amount: number) {
-    super('GainPower', false);
+    super('Gain Power');
     this.amount = amount;
   }
 }
