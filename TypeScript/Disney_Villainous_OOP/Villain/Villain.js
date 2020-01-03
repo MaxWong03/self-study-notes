@@ -1,7 +1,7 @@
 "use strict";
 exports.__esModule = true;
-var RealmLocation = require("./RealmLocation");
-var Action = require("./Action/Action");
+var RealmLocation = require("../RealmLocation");
+var Action = require("../Action/Action");
 var Villain = /** @class */ (function () {
     function Villain(name, objective, realm) {
         this.name = name;

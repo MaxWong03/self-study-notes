@@ -1,5 +1,5 @@
-import RealmLocation = require('./RealmLocation');
-import Action = require('./Action/Action');
+import RealmLocation = require('../RealmLocation');
+import Action = require('../Action/Action');
 
 class Villain {
   name: string;
