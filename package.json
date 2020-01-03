@@ -5,7 +5,7 @@
   "main": "curry.js",
   "scripts": {
     "test": "jest",
-    "test:watch": "npm test -- -- watch"
+    "test:watch": "npx jest --watch"
   },
   "repository": {
     "type": "git",
