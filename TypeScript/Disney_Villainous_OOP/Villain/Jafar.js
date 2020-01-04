@@ -14,7 +14,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var Villain = require("./Villain");
 var RealmLocation = require("../RealmLocation");
-var Action = require("../Action/Action");
+var GainPower = require("../Action/GainPower");
+var PlayCard = require("../Action/PlayCard");
+var Activate = require("../Action/Activate");
+var Vanquish = require("../Action/Vanquish");
+var Fate = require("../Action/Fate");
+var MoveAllyItem = require("../Action/MoveAllyItem");
+var Discard = require("../Action/Discard");
 var Jafar = /** @class */ (function (_super) {
     __extends(Jafar, _super);
     function Jafar() {
@@ -22,10 +28,10 @@ var Jafar = /** @class */ (function (_super) {
         _this.name = 'Jafar';
         _this.objective = "Start your turn with Magic Lamp at the Sultan's Palace and have Genie on your side";
         _this.realm = [
-            new RealmLocation('Sultan Palace', false, [new Action('Play A Card'), new Action('Activate')], [new Action('Vanquish'), new Action('Fate')]),
-            new RealmLocation('Streets Of Agrabah', false, [new Action('GainPower'), new Action('Fate')], [new Action('Discard'), new Action('PlayACard')]),
-            new RealmLocation('Oasis', false, [new Action('Activate'), new Action('PlayACard')], [new Action('GainPower'), new Action('PlayACard')]),
-            new RealmLocation('Cave Of Wonders', true, [new Action('Discard'), new Action('GainPower')], [new Action('PlayACard'), new Action('MoveAllyOrItem')])
+            new RealmLocation('Sultan Palace', false, [new PlayCard(), new Activate()], [new Vanquish(), new Fate()]),
+            new RealmLocation('Streets Of Agrabah', false, [new GainPower(1), new Fate()], [new Discard(), new PlayCard()]),
+            new RealmLocation('Oasis', false, [new Activate(), new PlayCard()], [new GainPower(3), new PlayCard()]),
+            new RealmLocation('Cave Of Wonders', true, [new Discard(), new GainPower(2)], [new PlayCard(), new MoveAllyItem()])
         ];
         _this.currentLocation = 'Sultan Palace';
         return _this;

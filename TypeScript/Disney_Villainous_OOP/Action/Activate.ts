@@ -1,5 +1,16 @@
 import Action = require('./Action');
 
 class Activate extends Action {
-  name: string = 'Activate';
+  targetCard: string;
+
+  constructor() {
+    super('Activate');
+    this.targetCard = '';
+  }
+
+  activateACard(targetCard: string) {
+    this.targetCard = targetCard;
+  }
 }
+
+export = Activate;
