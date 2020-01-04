@@ -20,6 +20,9 @@ var GainPower = /** @class */ (function (_super) {
         _this.amount = amount;
         return _this;
     }
+    GainPower.prototype.execute = function (villain) {
+        villain.power = villain.power + this.amount;
+    };
     return GainPower;
 }(Action));
 module.exports = GainPower;

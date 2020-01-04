@@ -6,6 +6,10 @@ class Action {
     this.name = name;
     this.isCovered = false;
   }
+
+  execute(param: any) {
+
+  }
 }
 
 export = Action;
