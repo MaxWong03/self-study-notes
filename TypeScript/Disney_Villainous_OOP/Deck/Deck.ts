@@ -1,6 +1,10 @@
 abstract class Deck {
   type: string;
 
+  constructor(type: string) {
+    this.type = type;
+  }
+
   abstract draw();
 
   abstract shuffle();
@@ -10,3 +14,5 @@ abstract class Deck {
   abstract returnCard();
 
 }
+
+export = Deck;
