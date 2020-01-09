@@ -1,10 +1,9 @@
 import Deck = require('./Deck');
 import Card = require('../Card/Card');
-class VillainDeck extends Deck {
 
+class FateDeck extends Deck {
   villain: string;
   cards: Array<Card>;
-
   constructor(type: string, villain: string) {
     super(type);
     this.villain = villain;
@@ -13,7 +12,7 @@ class VillainDeck extends Deck {
   draw() {
 
   }
-  
+
   shuffle() {
 
   }
@@ -25,4 +24,4 @@ class VillainDeck extends Deck {
   }
 }
 
-export = VillainDeck;
+export = FateDeck;
