@@ -23,8 +23,8 @@ var MoveAllyItem = require("../Action/MoveAllyItem");
 var Discard = require("../Action/Discard");
 var Jafar = /** @class */ (function (_super) {
     __extends(Jafar, _super);
-    function Jafar() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
+    function Jafar(power) {
+        var _this = _super.call(this) || this;
         _this.name = 'Jafar';
         _this.objective = "Start your turn with Magic Lamp at the Sultan's Palace and have Genie on your side";
         _this.realm = [
@@ -34,6 +34,7 @@ var Jafar = /** @class */ (function (_super) {
             new RealmLocation('Cave Of Wonders', true, [new Discard(), new GainPower(2)], [new PlayCard(), new MoveAllyItem()])
         ];
         _this.currentLocation = 'Sultan Palace';
+        _this.power = power;
         return _this;
     }
     return Jafar;

@@ -19,6 +19,10 @@ class Jafar extends Villain {
   ];
   
   currentLocation: string = 'Sultan Palace';
+  constructor(power: number) {
+    super();
+    this.power = power;
+  }
 
 }
 

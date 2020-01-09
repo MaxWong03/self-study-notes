@@ -5,9 +5,9 @@ class Villain {
   private _objective: string;
   private _realm: Array<RealmLocation>;
   private _currentLocation: string;
-  private _power: number = 0;
+  private _power: number;
 
-  get name() {
+  get name(): string {
     return this._name;
   }
 
@@ -15,12 +15,13 @@ class Villain {
     this._name = villainName;
   }
 
-  get power() {
+  get power(): number {
     return this._power;
   }
 
   set power(powerToken: number) {
-    this._power + powerToken;
+    if (this._power === undefined) this._power = powerToken;
+    else this._power = this._power + powerToken;
   }
 
   get objective() {

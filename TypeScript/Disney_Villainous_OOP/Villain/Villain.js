@@ -1,7 +1,6 @@
 "use strict";
 var Villain = /** @class */ (function () {
     function Villain() {
-        this._power = 0;
     }
     Object.defineProperty(Villain.prototype, "name", {
         get: function () {
@@ -18,7 +17,10 @@ var Villain = /** @class */ (function () {
             return this._power;
         },
         set: function (powerToken) {
-            this._power + powerToken;
+            if (this._power === undefined)
+                this._power = powerToken;
+            else
+                this._power = this._power + powerToken;
         },
         enumerable: true,
         configurable: true
