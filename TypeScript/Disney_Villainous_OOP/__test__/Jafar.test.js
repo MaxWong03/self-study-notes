@@ -18,22 +18,20 @@ describe('Jafar', function () {
         jafar.power = 3;
         expect(jafar.power).toBe(3);
     });
-    // test('Moving', () => {
-    //   const jafar = new Jafar(0);
-    //   expect(() => { jafar.move(jafar.currentLocation) }).toThrow();
-    //   jafar.move('Streets Of Agrabah');
-    //   expect(jafar.currentLocation).toBe('Streets Of Agrabah');
-    //   expect(jafar.currentLocation).not.toBe('Sultan Palace');
-    //   expect(() => { jafar.move('Cave Of Wonders') }).toThrow();
-    // });
-    // test('Moving to locations with Gain Power Action', () => {
-    //   const jafar = new Jafar(0);
-    //   jafar.move('Streets Of Agrabah');
-    //   expect(jafar.currentLocation).toBe('Streets Of Agrabah');
-    //   const currentLocation = jafar.getLocationClass('Streets Of Agrabah');
-    //   currentLocation.topActions[0].execute(jafar);
-    //   jafar.power = 3;
-    //   console.log(jafar.power);
-    //   expect(jafar.power).toBe(3);
-    // })
+    test('Moving', function () {
+        var jafar = new Jafar(0);
+        expect(function () { jafar.move(jafar.currentLocation); }).toThrow();
+        jafar.move('Streets Of Agrabah');
+        expect(jafar.currentLocation).toBe('Streets Of Agrabah');
+        expect(jafar.currentLocation).not.toBe('Sultan Palace');
+        expect(function () { jafar.move('Cave Of Wonders'); }).toThrow();
+    });
+    test('Moving to locations with Gain Power Action', function () {
+        var jafar = new Jafar(0);
+        jafar.move('Streets Of Agrabah');
+        expect(jafar.currentLocation).toBe('Streets Of Agrabah');
+        var currentLocation = jafar.getLocationClass('Streets Of Agrabah');
+        currentLocation.topActions[0].execute(jafar);
+        expect(jafar.power).toBe(1);
+    });
 });

@@ -33,26 +33,26 @@ describe('Action', function () {
         expect(activate.name).toBe('Activate');
         expect(activate.targetCard).toBe('');
     });
-    test('Play A Card is not covered and does not play any card by default', function () {
+    test('Vanquish is not covered and does not play any card by default', function () {
         var vanquish = new Vanquish();
         expect(vanquish instanceof Action).toBeTruthy();
         expect(vanquish.name).toBe('Vanquish');
         expect(vanquish.targetHero).toBe('');
     });
-    test('Play A Card is not covered and does not play any card by default', function () {
+    test('Fate is not covered and does not play any card by default', function () {
         var fate = new Fate();
         expect(fate instanceof Action).toBeTruthy();
         expect(fate.name).toBe('Fate');
         expect(fate.targetPlayer).toBe('');
     });
-    test('Play A Card is not covered and does not play any card by default', function () {
+    test('Move Ally or Item is not covered and does not play any card by default', function () {
         var moveAllyItem = new MoveAllyItem();
         expect(moveAllyItem instanceof Action).toBeTruthy();
         expect(moveAllyItem.name).toBe('Move An Ally Or Item');
         expect(moveAllyItem.targetAlly).toBe('');
         expect(moveAllyItem.targetItem).toBe('');
     });
-    test('Play A Card is not covered and does not play any card by default', function () {
+    test('Discard is not covered and does not play any card by default', function () {
         var discard = new Discard();
         expect(discard instanceof Action).toBeTruthy();
         expect(discard.name).toBe('Discard');

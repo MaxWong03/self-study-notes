@@ -14,6 +14,7 @@
     * [Person](/TypeScript/OOP/Person)
   * [Disney Villainous OOP](/TypeScript/Disney_Villainous_OOP)
 * [HigherOrderComponents](/Higher-Order-Components)
+* [Class-Component-SetInterval](/Class-Component-SetInterval)
 
 
 
