@@ -17,6 +17,8 @@
 * [Class-Component-SetInterval](/Class-Component-SetInterval)
 * [Ruby](/Ruby)
   * [Basics](/Ruby/basics) 
+* [Rails](/Rails)
+  * [hello_app](/Rails/hello_app)
 
 
 
