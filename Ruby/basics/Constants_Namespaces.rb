@@ -8,5 +8,6 @@ module Apple
   FOUNDED_BY = "L. Ron Hubbard"
 end
 
-binding.pry
+MY_NUM = 3
 
+binding.pry

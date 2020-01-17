@@ -17,8 +17,8 @@ puts experienced?(@candidates[0]) == true
 puts experienced?(@candidates[1]) == false
 
 #testing qualified_candidates
-# puts qualified_candidates(@candidates)
+puts qualified_candidates(@candidates)
 
 # 5, 10, 13
 
-puts ordered_by_qualifications(@candidates)
+# puts ordered_by_qualifications(@candidates)
