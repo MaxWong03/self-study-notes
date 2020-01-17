@@ -7,6 +7,18 @@ require './filters'
 
 ## Your test code can go here
 
-binding.pry
 
-pp @candidates
+# pp @candidates
+
+# binding.pry
+
+#testing experienced?
+puts experienced?(@candidates[0]) == true
+puts experienced?(@candidates[1]) == false
+
+#testing qualified_candidates
+# puts qualified_candidates(@candidates)
+
+# 5, 10, 13
+
+puts ordered_by_qualifications(@candidates)
