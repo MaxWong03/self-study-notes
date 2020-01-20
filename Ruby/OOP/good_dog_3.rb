@@ -17,12 +17,19 @@ class GoodDog
     "I am a GoodDog class!"
   end
 
-  def self.total_number_of_dogs
-    @@number_of_dogs
-  end
-
   def to_s
     "This dog's name is #{name} and it is #{age} in dog years"
+  end
+
+  #private method has to be called without self, you can do it with self for ruby2.7
+  def public_disclosure
+    "#{self.name} in human years is #{human_years}"
+  end
+
+  private
+
+  def human_years
+    age * DOG_YEARS
   end
 end
 

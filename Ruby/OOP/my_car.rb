@@ -29,17 +29,21 @@ class MyCar
     self.color = c
   end
 
-  def info
-    puts "My car is a #{self.color} #{self.model} from #{self.year} and is running at #{self.speed}"
+  def to_s
+    "My car is a #{self.color} #{self.model} from #{self.year} and is running at #{self.speed}"
+  end
+
+  def self.cal_gas_mileage(gallons, miles)
+    puts "#{miles / gallons} miles pere gallon of gas"
   end
 end
 
 toyota = MyCar.new(2008, 'grey', 'corlla')
-toyota.info
+puts toyota
 toyota.spray_paint('red')
-toyota.info
+puts toyota
 toyota.speed_up(30)
 toyota.break(10)
-toyota.info
+puts toyota
 toyota.shut_off
-toyota.info
+puts toyota
