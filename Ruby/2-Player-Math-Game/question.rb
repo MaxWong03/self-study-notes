@@ -1,5 +1,6 @@
 class Question
-  attr_writer :player_answer
+  attr_accessor :player_answer
+  attr_reader :question :correct_answer
   def initialize(question, correct_answer)
     @question = question
     @correct_answer = correct_answer
