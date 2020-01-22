@@ -17,6 +17,8 @@
 * [Class-Component-SetInterval](/Class-Component-SetInterval)
 * [Ruby](/Ruby)
   * [Basics](/Ruby/basics) 
+  * [OOP](/Ruby/OOP)
+  * [2-Player-Math-Game](/Ruby/2-Player-Math-Game)
 
 
 
