@@ -1,11 +1,9 @@
 class Player
-  attr_accessor: lives, isWinner
+  attr_accessor :lives
+  attr_reader :name
   def initialize(lives, name)
     self.lives = lives
     @name = name
-    self.isWinner = false
   end
 
-  def answer_question
-  end
 end

@@ -1,6 +1,6 @@
 class Question
   attr_accessor :player_answer
-  attr_reader :question :correct_answer
+  attr_reader :question, :correct_answer
   def initialize(question, correct_answer)
     @question = question
     @correct_answer = correct_answer
