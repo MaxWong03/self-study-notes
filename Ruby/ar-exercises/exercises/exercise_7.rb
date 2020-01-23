@@ -13,6 +13,6 @@ puts "----------"
 puts "Enter your store name:"
 store_name = gets.chomp
 @user_store = Store.create({ name: store_name })
-@user_store.errors.messages.each {|message| puts "Error: #{message}"}
+puts @user_store.errors.full_messages
 
 puts "There are #{Store.count} stores"
