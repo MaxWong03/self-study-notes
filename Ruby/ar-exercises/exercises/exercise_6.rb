@@ -58,7 +58,7 @@ puts "There are also #{@store2.employees.count} at the #{@store2.name} store"
 
 
 "These are the employees at #{@store1.name}"
-@store1.employees.each {|employee| puts "First Name: #{employee.first_name}, Last Name: #{employee.last_name}, Hourly Rate: #{employee.hourly_rate}"}
+@store1.employees.each {|employee| puts "First Name: #{employee.first_name}, Last Name: #{employee.last_name}, Hourly Rate: #{employee.hourly_rate} Error: #{employee.errors.messages}"}
 
 "These are the employees at #{@store2.name}"
-@store2.employees.each {|employee| puts "First Name: #{employee.first_name}, Last Name: #{employee.last_name}, Hourly Rate: #{employee.hourly_rate}"}
+@store2.employees.each {|employee| puts "First Name: #{employee.first_name}, Last Name: #{employee.last_name}, Hourly Rate: #{employee.hourly_rate} Error: #{employee.errors.messages}"}
