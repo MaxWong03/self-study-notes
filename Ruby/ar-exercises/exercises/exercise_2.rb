@@ -9,5 +9,5 @@ puts "----------"
 @store2 = Store.find(2)
 @store1.update(name: "Max's store")
 
-puts "#{@store1.inspect}"
-puts "#{@store2.inspect}"
+p @store1
+p @store2
