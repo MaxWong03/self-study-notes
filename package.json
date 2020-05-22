@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/MaxWong03/self-study-notes#readme",
   "dependencies": {
+    "@tds/core-text": "^3.1.1",
     "babel-node": "0.0.1-security",
     "express": "^4.17.1",
     "loadash": "^1.0.0"
